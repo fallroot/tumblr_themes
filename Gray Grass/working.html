@@ -1,0 +1,173 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="description" content="About Web Development &amp; Productivity"/>
+    
+    <title>Daily Upgrade</title>
+    <link rel="shortcut icon" href="http://assets.tumblr.com/images/default_avatar_16.gif">
+    <link rel="alternate" type="application/rss+xml" href="http://codeboom.tumblr.com/rss">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Inconsolata|Raleway:100">
+    <link rel="stylesheet" href="stylesheets/base.css">
+</head>
+<body>
+  <aside>
+    <h1>Daily Upgrade</h1>
+    
+      <p id="description">About Web Development & Productivity</p>
+    
+  </aside>
+  <div id="main">
+    <section id="posts">
+      
+      <article class="text">
+        
+            
+              <h1><a href="http://codeboom.tumblr.com/post/3737558559/using-markdown-in-devonthink">DEVONthink에서 마크다운 쓰기 </a></h1>
+            
+            <h2>Using Markdown in DEVONthink</h2> 
+ 
+<p>DEVONthink에서 만들 수 있는 텍스트 파일은 Plain Text, Rich Text 파일입니다.</p> 
+ 
+<p>마크다운 파일을 쓰려면 외부에서 마크다운 파일을 만들어서 임포트해야 합니다.</p> 
+ 
+<p>이 과정을 애플스크립트로 자동화해서 쓰도록 합니다.</p> 
+ 
+<h3>구현</h3> 
+ 
+<p><code>/tmp</code> 디렉토리에 <code>blank.markdown</code>이란 임시파일을 생성한 다음 DEVONthink에서 임포트하도록 합니다.</p> 
+ 
+<p>애플스크립트 편집기를 열어서 아래 코드를 입력합니다.</p> 
+ 
+<pre class="prettyprint"><code>do shell script "touch /tmp/blank.markdown"
+
+tell application id "com.devon-technologies.thinkpro2"
+    import "/tmp/blank.markdown" name "Change this title"
+end tell
+
+do shell script "touch /tmp/blank.markdown"
+ 
+tell application id "com.devon-technologies.thinkpro2"
+    import "/tmp/blank.markdown" name "Change this title"
+end tell
+
+do shell script "touch /tmp/blank.markdown"
+
+tell application id "com.devon-technologies.thinkpro2"
+    import "/tmp/blank.markdown" name "Change this title"
+end tell
+</code></pre> 
+<pre class="prettyprint lang-js linenums">
+  <code>
+    // Say hello world until the user starts questioning
+    // the meaningfulness of their existence.
+    function helloWorld(world) {
+      for (var i = 42; --i >= 0;) {
+        alert('Hello ' + String(world));
+      }
+    }
+  </code> 
+</pre>
+<p>메뉴 막대에서 사용하려면 <code>~/Library/Scripts/</code> 디렉토리에,</p> 
+ 
+<p>DEVONthink 메뉴에서 사용하려면 <code>~/Library/Application Support/DEVONthink Pro 2/Scripts/</code> 디렉토리에</p> 
+ 
+<p>스크립트 파일을 <code>New Markdown</code>이라는 이름으로 저장합니다.</p> 
+ 
+<p>저는 <code>~/Library/Scripts/DEVONthink Pro/</code>, <code>/Library/Application Support/DEVONthink Pro 2/Scripts/Data/</code> 밑에 파일을 두고 사용하고 있습니다.</p> 
+ 
+<h3>단축키</h3> 
+ 
+<p>시스템 설정 &gt; 키보드 &gt; 단축키 메뉴로 들어가서 DEVONthink 어플리케이션에 위에서 스크립트 파일명으로 지정한 <code>New Markdown</code>이란 제목으로 단축키(저는 Command-Control-M)를 지정합니다.</p> 
+ 
+<h3>실행</h3> 
+ 
+<ul> 
+<li>메뉴 막대 또는 DEVONthink 메뉴의 스크립트 메뉴에서 <code>New Markdown</code>을 선택해서 새 마크다운 파일을 만듭니다.</li> 
+<li>위에서 지정한 단축키를 눌러 새 마크다운 파일을 만듭니다.</li> 
+</ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="post_info clearfix">
+        
+					<p class="posted_at">2011.3.9 12:27am</p>
+				
+        
+          <p class="tags">
+            <a href="http://codeboom.tumblr.com/tagged/markdown">markdown</a><a href="http://codeboom.tumblr.com/tagged/devonthink">devonthink</a>
+          </p>
+        
+        </div>
+        
+      </article>
+      
+      <article class="text">
+        
+            
+              <h1><a href="http://codeboom.tumblr.com/post/3720887498/quick-look-for-markdown-in-osx">마크다운 훑어보기</a></h1>
+            
+            <h2>Quick Look for Markdown in OS X</h2> 
+ 
+<p>작성된 마크다운 파일을 쉽게 보기 위해서 <a href="http://philtoland.com/">Phil Toland</a>씨가 만든 훑어보기 플러그인 <a href="https://github.com/toland/qlmarkdown/">QLMarkdown</a>을 사용합니다.</p> 
+ 
+<h3>설치</h3> 
+ 
+<ol> 
+<li> 
+<a href="http://github.com/toland/qlmarkdown/archives/master">플러그인 파일</a>을 내려 받습니다.</li> 
+<li> 
+<code>QLMarkdown.qlgenerator</code> 파일을 <code>~/Library/QuickLook</code> 또는 <code>/Library/QuickLook</code>로 옮겨 놓습니다.</li> 
+</ol> 
+<h3>지원하는 파일 확장자</h3> 
+ 
+<ul> 
+<li><code>.md</code></li> 
+<li><code>.mdown</code></li> 
+<li><code>.markdown</code></li> 
+</ul> 
+<h3>실행</h3> 
+ 
+<p>파인더에서 마크다운 파일을 선택하고 스페이스 키를 눌러 훑어보기를 합니다.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="post_info clearfix">
+        
+					<p class="posted_at">2011.3.8 6:36am</p>
+				
+        
+          <p class="tags">
+            <a href="http://codeboom.tumblr.com/tagged/osx">osx</a><a href="http://codeboom.tumblr.com/tagged/markdown">markdown</a><a href="http://codeboom.tumblr.com/tagged/quicklook">quicklook</a>
+          </p>
+        
+        </div>
+        
+      </article>
+      
+    </section>
+    <p id="footer">
+        
+        
+        <a href="/archive">Archive</a>
+    </p>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="javascripts/prettify.js"></script>
+  <script>
+  prettyPrint();
+  </script>
+</body>
+</html>

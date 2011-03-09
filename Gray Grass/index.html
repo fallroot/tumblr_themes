@@ -2,224 +2,125 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Daily Upgrade</title>
-    <link href="http://fonts.googleapis.com/css?family=Raleway:100|Inconsolata" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="stylesheets/base.css">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}"/>
+    {/block:Description}
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Inconsolata|Raleway:100">
+    <style media="screen">
+    {CustomCSS}
+    </style>
 </head>
-  <body>
-    <aside>
-      <h1>Daily Upgrade</h1>
-      
-    </aside>
-    <div id="wrap">
-      <ol id="posts">
-          
-              
-              
-              
+<body>
+  <aside>
+    <h1>{Title}</h1>
+    {block:Description}
+      <p id="description">{Description}</p>
+    {/block:Description}
+  </aside>
+  <div id="main">
+    <section id="posts">
+      {block:Posts}
+      <article class="{PostType}">
+        {block:Text}
+            {block:Title}
+              <h1><a href="{Permalink}">{Title}</a></h1>
+            {/block:Title}
+            {Body}
+        {/block:Text}
+        {block:Photo}
+              <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
 
-              
-                  <li class="post quote">
-                      "It does not matter how slow you go so long as you do not stop."
-
-                      
-                          <div class="source">Wisdom of&nbsp;<a href="#" title="http://en.wikipedia.org/wiki/Confucius">Confucius</a></div>
-                      
-                  </li>
-              
-
-              
-
-              
-
-              
-
-              
-          
-              
-              
-                  <li class="post photo">
-                      <img src="http://26.media.tumblr.com/tumblr_kzjlfiTnfe1qz4rgho1_500.jpg" alt="Passing through Times Square by&nbsp;Mareen Fischinger">
-
-                      
-                          <div class="caption"><p>Passing through Times Square by&nbsp;<a href="#" title="http://www.mareenfischinger.com/">Mareen Fischinger</a></p></div>
-                      
-                  </li>
-              
-              
-
-              
-
-              
-
-              
-
-              
-
-              
-          
-              
-              
-              
-
-              
-
-              
-                  <li class="post link">
-                      <a href="#" title="http://" class="link">My favorite web site</a>
-
-                      
-                          <div class="description"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div>
-                      
-                  </li>
-              
-
-              
-
-              
-
-              
-          
-              
-              
-              
-
-              
-
-              
-
-              
-                  <li class="post chat">
-                      
-
-                      <ul class="chat">
-                          
-                              <li class="odd user_1">
-                                  
-                                      <span class="label">Jack:</span>
-                                  
-
-                                  Hey, you know what sucks?
-
-                              </li>
-                          
-                              <li class="even user_2">
-                                  
-                                      <span class="label">Lindsey:</span>
-                                  
-
-                                  vaccuums
-
-                              </li>
-                          
-                              <li class="odd user_1">
-                                  
-                                      <span class="label">Jack:</span>
-                                  
-
-                                  Hey, you know what sucks in a metaphorical sense?
-
-                              </li>
-                          
-                              <li class="even user_2">
-                                  
-                                      <span class="label">Lindsey:</span>
-                                  
-
-                                  black holes
-
-                              </li>
-                          
-                              <li class="odd user_1">
-                                  
-                                      <span class="label">Jack:</span>
-                                  
-
-                                  Hey, you know what just isn't cool?
-
-                              </li>
-                          
-                              <li class="even user_2">
-                                  
-                                      <span class="label">Lindsey:</span>
-                                  
-
-                                  lava?
-                              </li>
-                          
-                      </ul>
-                  </li>
-              
-
-              
-
-              
-          
-              
-              
-              
-
-              
-
-              
-
-              
-
-              
-
-              
-                  <li class="post audio">
-                      <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?484"></script><span id="audio_player_459260683"><div class="audio_player"><embed type="application/x-shockwave-flash" src="http://assets.tumblr.com/swf/audio_player_black.swf?audio_file=http://www.tumblr.com/audio_file/459260683/tumblr_ksc4i2SkVU1qz8ouq&amp;color=FFFFFF" height="27" width="207" quality="best"></div></span><script type="text/javascript">replaceIfFlash(9,"audio_player_459260683",'\x3cdiv class=\x22audio_player\x22\x3e<embed type="application/x-shockwave-flash" src="http://assets.tumblr.com/swf/audio_player_black.swf?audio_file=http://www.tumblr.com/audio_file/459260683/tumblr_ksc4i2SkVU1qz8ouq&color=FFFFFF" height="27" width="207" quality="best"></embed>\x3c/div\x3e')</script>
-
-                      
-                          <div class="caption"><p><strong><a href="#" title="http://allisonweiss.tumblr.com/">Allison Weiss</a>&nbsp;—</strong> Fingers Crossed</p></div>
-                      
-                  </li>
-              
-          
-              
-                  <li class="post text">
-                      
-                          <h3><a href="#" title="http://demo.tumblr.com/post/232/an-example-post">An example post</a></h3>
-                      
-
-                      <p>Lorem ipsum dolor sit amet, consectetuer <a href="#" title="/">adipiscing elit</a>. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.</p>
-<ul>
-<li>Lorem ipsum dolor sit amet.</li>
-<li>Consectetuer adipiscing elit. </li>
-<li>Nam at tortor quis ipsum tempor aliquet.</li>
-</ul>
-<p>Cum sociis <a href="#" title="/">natoque penatibus</a> et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.</p>
-<blockquote>Donec placerat mauris commodo dolor. Nulla tincidunt. Nulla vitae augue.</blockquote>
-<p>Suspendisse ac pede. Cras <a href="#" title="/">tincidunt pretium</a> felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque porttitor mi id felis. Maecenas nec augue. Praesent a quam pretium leo congue accumsan.</p>
-                  </li>
-              
-              
-              
-
-              
-
-              
-
-              
-
-              
-
-              
-          
-      </ol>
-
-      <p id="footer">
-          
-
-          
-              <a href="#" title="/page/2">Next »</a>
-          
-
-          <a href="#" title="/archive">Archive</a>
-      </p>
-    </div>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/jquery.js"%3E%3C/script%3E'))</script>
+              {block:Caption}
+                  <div class="caption">{Caption}</div>
+              {/block:Caption}
+        {/block:Photo}
+        {block:Photoset}
+              {Photoset-500}
+              {block:Caption}
+                  <div class="caption">{Caption}</div>
+              {/block:Caption}
+        {/block:Photoset}
+        {block:Quote}
+              "{Quote}"
+              {block:Source}
+                  <div class="source">{Source}</div>
+              {/block:Source}
+        {/block:Quote}
+        {block:Link}
+              <a href="{URL}" class="articlenk" {Target}>{Name}</a>
+              {block:Description}
+                  <div class="description">{Description}</div>
+              {/block:Description}
+        {/block:Link}
+        {block:Chat}
+              {block:Title}
+                  <h2><a href="{Permaarticlenk}">{Title}</a></h2>
+              {/block:Title}
+              <ul class="chat">
+                  {block:Lines}
+                      <li class="{Alt} user_{UserNumber}">
+                          {block:Label}
+                              <span class="label">{Label}</span>
+                          {/block:Label}
+                          {Line}
+                      </li>
+                  {/block:Lines}
+              </ul>
+        {/block:Chat}
+        {block:Video}
+              {Video-500}
+              {block:Caption}
+                  <div class="caption">{Caption}</div>
+              {/block:Caption}
+        {/block:Video}
+        {block:Audio}
+              {AudioPlayerBlack}
+              {block:Caption}
+                  <div class="caption">{Caption}</div>
+              {/block:Caption}
+        {/block:Audio}
+        <div class="post_info clearfix">
+        {block:Date}
+					<p class="posted_at">{Year}. {MonthNumber}. {DayOfMonth}</p>
+				{/block:Date}
+        {block:HasTags}
+          <p class="tags">
+            {block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}
+          </p>
+        {/block:HasTags}
+        </div>
+        {block:IfDisqusShortname}
+          {block:Permalink}
+              <div class="notecontainer">
+                  <div id="disqus_thread"></div>
+                  <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                  <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+              </div>
+              <div>
+                  {lang:Blog comments powered by Disqus 2}
+              </div>
+          {/block:Permalink}
+        {/block:IfDisqusShortname}
+      </article>
+      {/block:Posts}
+    </section>
+    <p id="footer">
+        {block:PreviousPage}
+            <a href="{PreviousPage}">&#171; Previous</a>
+        {/block:PreviousPage}
+        {block:NextPage}
+            <a href="{NextPage}">Next &#187;</a>
+        {/block:NextPage}
+        <a href="/archive">Archive</a>
+    </p>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="http://static.tumblr.com/lf183lk/nNklhsb7o/prettify.js"></script>
+  <script>
+    prettyPrint();
+  </script>
 </body>
 </html>

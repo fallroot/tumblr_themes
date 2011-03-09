@@ -25,50 +25,155 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  background: url(../images/bg.jpg) repeat;
-/*  color: #4d4843;*/
-  color: #918d86;
-  font: 14px/1.5 "NanumGothic", "Segoe UI";
+  background: url(http://static.tumblr.com/lf183lk/ZeLlhryda/bg.jpg);
+  color: #666;
+  font: 14px/2em Candara, "Segoe UI", Tahoma, NanumGothic, NanumGothicOTF, 나눔고딕, "Malgun Gothic", "맑은 고딕";
 }
 a {
-  color: #3689b3;
+  border-bottom: 1px dotted #666;
+  color: #666;
+  margin-right: 0.25em;
 }
 a:hover {
-  color: #1f4e66;
+/*  color: #256;*/
+}
+a, a:hover {
+  text-decoration: none;
 }
 aside {
-  background: #000 url(../images/aside_bg.jpg) no-repeat left 128px;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  background: #000 url(http://static.tumblr.com/lf183lk/ex3lhrydy/aside_bg.jpg) no-repeat left 128px;
   color: #fff;
   height: 100%;
   min-height: 600px;
-  left: 690px;
-  padding: 64px 16px 16px;
+  left: 660px;
+  padding: 48px 16px 16px;
   position: fixed;
   top: 0;
   width: 300px;
   -webkit-box-shadow: 0 0 10px #000;
 }
 aside h1 {
-  color: #999;
-  font: bold 48px Raleway;
+  color: #aaa;
+  font: bold 48px "Gill Sans", "Gill Sans MT", "Trebuchet MS";
   height: 48px;
-  letter-spacing: -5px;
+  margin-bottom: 0.25em;
+  letter-spacing: -4px;
   overflow: hidden;
   text-align: center;
 }
-#wrap {
-  padding: 48px 48px 48px 0;
-  width: 620px;
+code {
+  font-family: Inconsolata, Consolas, Monaco, monospace;
 }
-.post {
-  background-color: #fff;
-  border-bottom-right-radius: 10px;
-  margin-bottom: 16px;
-  padding: 16px 16px 24px 96px;
+#main {
+  margin-top: 48px;
+  width: 640px;
+}
+#description {
+  color: #555;
+  font: 16px Raleway;
+  text-align: center;
+}
+article {
+  background: #fff no-repeat 32px 32px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 3em;
+  padding: 32px 32px 32px 96px;
   -webkit-box-shadow: 0px 0px 5px #000;
 }
-.post h3 {
-  font: 24px Raleway, "Helvetica Neue", Helvetica;
+article h1, article h1 a {
+  color: #333;
 }
+article h2, article h3 {
+  color: #666;
+}
+article h1 {
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5em;
+}
+article h1 a {
+  border: none;
+}
+article h2 {
+  font: italic 1em Georgia, "Times New Roman", serif;
+  margin-bottom: 1em;
+  text-align: right;
+}
+article h3 {
+  font-size: 1.25em;
+  margin: 1em 0 0.25em;
+}
+article.text {
+  background-image: url(http://static.tumblr.com/lf183lk/vfilhsb03/post_text.png);
+}
+article.photo, article.photoset {
+  background-image: url(http://static.tumblr.com/lf183lk/DPWlhsb3k/post_photo.png);
+}
+article.link {
+  background-image: url(http://static.tumblr.com/lf183lk/PkYlhsb2e/post_link.png);
+}
+article.audio {
+  background-image: url(http://static.tumblr.com/lf183lk/6Mhlhsb0q/post_audio.png);
+}
+article.video {
+  background-image: url(http://static.tumblr.com/lf183lk/iiclhsb44/post_video.png);
+}
+article.quote, article.chat {
+  background-image: url(http://static.tumblr.com/lf183lk/Xullhsb15/post_chat.png);
+}
+pre {
+/*  background: url("/Users/fallroot/Pictures/Patterns/tileable_midnight_blue_grunge_patterns/tileable_midnight_blue_grunge_pattern_1.jpg") repeat;*/
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  line-height: 1.5em;
+  margin: 1em 0;
+  padding: 1em;
+  -webkit-box-shadow: 3px 3px 5px #333;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.post_info {
+  margin-top: 3em;
+}
+.posted_at {
+  background: url(http://static.tumblr.com/lf183lk/N1clhsayw/clock.png) no-repeat right center;
+  float: left;
+  font: italic 12px Georgia, serif;
+  line-height: 16px;
+  padding-right: 24px;
+  text-align: right;
+}
+.tags {
+  background: url(http://static.tumblr.com/lf183lk/EVNlhsaze/tag.png) no-repeat left center;
+  float: right;
+  font: italic 12px "Gill Sans", "Gill Sans MT", "Trebuchet MS";
+  letter-spacing: 1px;
+  line-height: 16px;
+  padding-left: 24px;
+  text-align: right;
+}
+.tags a {
+  border: none;
+  margin-right: 0.5em;
+}
+.tags a:hover {
+  border-bottom: 1px solid #666;
+}
+/* Prettify */
+pre .str { color: #ffa0a0; } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold; }
+pre .com { color: #87ceeb; } /* comment - skyblue */
+pre .typ { color: #98fb98; } /* type    - lightgreen */
+pre .lit { color: #cd5c5c; } /* literal - darkred */
+pre .pun { color: #fff; }    /* punctuation */
+pre .pln { color: #fff; }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold; } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold; } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0; } /* attribute value - pink */
+pre .dec { color: #98fb98; } /* decimal         - lightgreen */
